@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Homepage</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.6.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container"> 
+
+
+        <div class="row">
+           <div class="col-md-12">
+        @HelperMethods.input("button","btn1","Gönder")
+               <br />
+        @HelperMethods.Table("table1",3,3,"Ad","Soyad","Yas")
+
+
+           </div>
+
+        </div>
+        <hr />
+        <div class="row">
+
+            <div role="alert" class="alert alert-danger ">
+                Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+            </div>
+            <div>
+                @Html.Alert( text:"deneme yaptık")
+            </div>
+
+        </div>
+
+    </div>
+    <hr/>
+    <div>
+            
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿@helper input(string typ, string name, string val)
+{
+    <input type="@typ" name="@name" value="@val" id="@name" />
+
+}
+
+@helper Table(string name, int satir, int sutun, params string[] baslik)
+{
+    <table id="name" name="name" border="1">
+
+        <tr>
+            @for (int i = 0; i < sutun; i++)
+            {
+                <th>@baslik[i]</th>
+            }
+
+        </tr>
+        @for (int i = 0; i < satir; i++)
+        {
+            <tr>
+                @for (int j = 0; i < sutun; i++)
+                {
+                    <td>@(i.ToString()+","+ j.ToString())</td>
+                }
+            </tr>
+        }
+
+    </table>
+
+
+}
+
+@helper Tag(string css, string text)
+{
+    <span class="label- label-@css  ">@text</span>
+
+}
+
+@helper Button(string href = "#", string css = "primary", string text = "", string name = "btn1", string size = "xs")
+{
+
+    <a id="@name" name="@name" href="@href" class="btn btn-@css btn-@size ">@text</a>
+
+}
+
+@helper LinkList(string name, params string []linktext)
+{
+    <ul id="" name="">
+        @for (int i = 0; i < linktext.Length; i++)
+        {
+            <li><a href="#">@linktext[i]</a></li>
+
+        }
+       
+    </ul>
+
+}

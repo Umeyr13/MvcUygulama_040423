@@ -1,0 +1,123 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.6.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+
+<body>
+ 
+ 
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Brand</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">Link</a></li>
+                            
+                               
+                        </ul>
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Link</a></li>
+                            
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-md-9">
+                    <h3>Consectetur adipiscing elit fusce vel.</h3>
+                    <p>Consectetur adipiscing elit fusce vel.</p>
+                    <p>Id sollicitudin urna fermentum ut fusceinteger.</p>
+                    <p>Elit fusce vel sapien elit in malesuada.</p>
+                    <p>Semper mi, id sollicitudin urna fermentum ut.</p>
+                    <p>Fusce varius nisl ac ipsum gravida vel.</p>
+                </div>
+
+
+                <div class="col-md-3">
+                    <h2>Kategoriler</h2>
+                    <ul>
+                        @*<li><a href="<#">Kategori1</a></li>
+                        <li><a href="#">Kategori2</a></li>
+                        <li><a href="#">Kategori3</a></li>
+                        <li><a href="#">Kategori4</a></li>
+                        <li><a href="#">Kategori5</a></li>*@
+
+                        @HelperMethods.LinkList("List1", "Kategori1", "Kategori2", "Kategori3", "kategori4")
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Panel content
+                    @HelperMethods.Button(text: "Devamı")
+                </div>
+                <div class="panel-footer">
+                    Panel footer
+                    @for (int i = 0; i < 3; i++)
+                    {
+                        @HelperMethods.Tag("warning", i.ToString())
+                    }
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <hr />
+                <span class="small"> Tüm hakları saklıdır &copy; </span>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
